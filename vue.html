@@ -41,30 +41,128 @@
             </div>
 
             <div class="row">
-                <div class="modal fade" id="popup" tabindex="-1" role="dialog">
-			  <div class="modal-dialog">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Lorem Ipsum</h4>
+                <div class="col-md-8 col-md-offset-2 panel-group" id="accordion">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#pan1">
+					  Dossier 1
+					</a>
+				  </h4>
+				</div>
+				<div id="pan1" class="panel-collapse collapse">
+				  <div class="panel-body">
+                                      <ul class="nav nav-tabs">
+				<li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
+				<li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  	<div class="tab-pane fade in active" id="aPayer">
+                                   details ...
+				</div>
+				<div class="tab-pane fade" id="aRecevoir">
+                                   encore des details ...
+				</div>
+				
+			</div>
 				  </div>
-				  <div class="modal-body">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices ornare magna, in bibendum quam aliquam eu. Nunc sagittis, ipsum eget tincidunt imperdiet, leo massa sodales lectus, eget convallis eros nibh in est. Integer ullamcorper luctus orci vitae fermentum. Sed et orci sed tellus gravida consectetur nec non elit. Vivamus congue vehicula enim quis cursus. Fusce eget varius purus. Etiam sollicitudin leo vitae ullamcorper pulvinar. Praesent nec lacus a nisi feugiat hendrerit. Vivamus euismod feugiat risus, ut tincidunt elit. Duis sapien ante, porttitor ut tincidunt in, blandit volutpat ipsum.
+				</div>
+			  </div>
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#pan2">
+					  Dossier 2
+					</a>
+				  </h4>
+				</div>
+				<div id="pan2" class="panel-collapse collapse">
+				  <div class="panel-body">
+                                      <ul class="nav nav-tabs">
+				<li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
+				<li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  	<div class="tab-pane fade in active" id="aPayer">
+                                   details ...
+				</div>
+				<div class="tab-pane fade" id="aRecevoir">
+                                   encore des details ...
+				</div>
+				
+			</div> 
 				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#pan3">
+					  Dossier 3
+					</a>
+				  </h4>
+				</div>
+				<div id="pan3" class="panel-collapse collapse">
+				  <div class="panel-body">
+                                      <ul class="nav nav-tabs">
+				<li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
+				<li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  	<div class="tab-pane fade in active" id="aPayer">
+                                   details ...
+				</div>
+				<div class="tab-pane fade" id="aRecevoir">
+                                   encore des details ...
+				</div>
+				
+			</div>
 				  </div>
 				</div>
 			  </div>
 			</div>
             </div>
-            <div class="row">
-
-            </div>
+           
         </div>
 
         <script src="vendor/js/jquery-1.11.0.min.js"></script>
         <script src="vendor/boostrap/js/bootstrap.min.js"></script>
         <script src="vendor/js/controleur.js"></script>
+        
+         <script>
+            $(function () { 
+                $("[data-toggle='tooltip']").tooltip();
+            });
+        </script>
+        
+        <script>
+            $(function () { 
+                $("[data-toggle='popovers']").popovers();
+            });
+        </script>
+        
+        <script>
+            $(function () { 
+                $("[data-toggle='button']").button();
+            });
+        </script>
+        
+         <script>
+            $(function () { 
+                $("[data-toggle='tabs']").tabs();
+            });
+        </script>
+        
+        <script>
+            $(function () { 
+                $("[data-toggle='collapse']").collapse();
+            });
+        </script>
     </body>
 </html>
