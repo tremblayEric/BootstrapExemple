@@ -14,6 +14,7 @@
 
 
             <div class="row">
+                <!-- Liste de client -->
                 <div class="col-md-2 col-md-offset-0">
                     <label for="prenom">Membres</label>
                     <div class="input-group">
@@ -41,6 +42,7 @@
                 </div>
             </div>
 
+            <!-- Lste des dossiers : se devoile progressivement lorsque l'on clique dessu -->
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 panel-group" id="accordion">
                     <div class="panel panel-default">
@@ -58,7 +60,7 @@
                                     <li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
                                 </ul>
 
-                                <!-- Tab panes -->
+                                <!-- Liste des items au dossier -->
                                 <div class="tab-content">
                                     <div class="tab-pane fade in active" id="aPayer">
 
@@ -151,8 +153,6 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-
-
                                     </div>
 
                                 </div>
@@ -231,208 +231,209 @@
                             <h4 class="modal-title">Vente de Livre</h4>
                         </div>
                         <div class="modal-body">
-<div class="row">
-    <div class="col-md-3">
-                            <address>
-                                <strong>Ti Bob</strong><br>
-                                1234 Elm Street<br>
-                                Silent Hill, Qc, Ca<br>
-                                H0H 0H0<br>
-                                <abbr title="Phone">P:</abbr> (123) 456-7890
-                            </address>
+                            <div class="row">
+                                <!-- Facture de livres -->
+                                <div class="col-md-3">
+                                    <address>
+                                        <strong>Ti Bob</strong><br>
+                                        1234 Elm Street<br>
+                                        Silent Hill, Qc, Ca<br>
+                                        H0H 0H0<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
 
-                            <address>
-                                <strong>Courriel</strong><br>
-                                <a href="mailto:#">unCourriel@live.ca</a>
-                            </address>
-    
-    </div>
-    <div class="col-md-7 col-md-offset-2">
-   
-        
-                                        <table class="table table-hover table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Facture</th>
-                                                    <th>Numero de Membre</th>
-                                                    <th>Numero de compte</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="info">
-                                                    <th>12923737</th>
-                                                    <th>001010</th>
-                                                    <th>Dossier 1</th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-    </div>
-     
-                        </div>
-                            
+                                    <address>
+                                        <strong>Courriel</strong><br>
+                                        <a href="mailto:#">unCourriel@live.ca</a>
+                                    </address>
+
+                                </div>
+                                <div class="col-md-7 col-md-offset-2">
+
+
+                                    <table class="table table-hover table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>Facture</th>
+                                                <th>Numero de Membre</th>
+                                                <th>Numero de compte</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="info">
+                                                <th>12923737</th>
+                                                <th>001010</th>
+                                                <th>Dossier 1</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
                             <div class="row">
                                 <table class="table table-hover table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>Nom du Produit</th>
-                                                    <th>Prix</th>
-                                                    <th>Quantite</th>
-                                                    <th>Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="info">
-                                                    <th>2014-01-12</th>
-                                                    <th>Le Seigneur des Anneaux</th>
-                                                    <th>50.00</th>
-                                                    <th>1</th>
-                                                    <th>50.00</th>
-                                                </tr>
-                                                <tr class="active">
-                                                    <th>2014-01-12</th>
-                                                    <th>Les recettes de Tante Hilda</th>
-                                                    <th>15.00</th>
-                                                    <th>1</th>
-                                                    <th>5.00</th>
-                                                </tr>
-                                                <tr class="info">
-                                                    <th>2014-01-12</th>
-                                                    <th>Le Hobbit</th>
-                                                    <th>15.00</th>
-                                                    <th>1</th>
-                                                    <th>15.00</th>
-                                                </tr>
-                                                <tr class="active">
-                                                    <th>2014-01-12</th>
-                                                    <th>Coder Proprement</th>
-                                                    <th>10.00</th>
-                                                    <th>3</th>
-                                                    <th>30.00</th>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr class="active">
-                                                    <th colspan="4" class="text-right">Grand Total</th>
-                                                    <th>100.00</th>
-                                                </tr>
-                                            </tfoot>
-                                            
-                                        </table>
-                                
-                                
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Nom du Produit</th>
+                                            <th>Prix</th>
+                                            <th>Quantite</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="info">
+                                            <th>2014-01-12</th>
+                                            <th>Le Seigneur des Anneaux</th>
+                                            <th>50.00</th>
+                                            <th>1</th>
+                                            <th>50.00</th>
+                                        </tr>
+                                        <tr class="active">
+                                            <th>2014-01-12</th>
+                                            <th>Les recettes de Tante Hilda</th>
+                                            <th>15.00</th>
+                                            <th>1</th>
+                                            <th>5.00</th>
+                                        </tr>
+                                        <tr class="info">
+                                            <th>2014-01-12</th>
+                                            <th>Le Hobbit</th>
+                                            <th>15.00</th>
+                                            <th>1</th>
+                                            <th>15.00</th>
+                                        </tr>
+                                        <tr class="active">
+                                            <th>2014-01-12</th>
+                                            <th>Coder Proprement</th>
+                                            <th>10.00</th>
+                                            <th>3</th>
+                                            <th>30.00</th>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="active">
+                                            <th colspan="4" class="text-right">Grand Total</th>
+                                            <th>100.00</th>
+                                        </tr>
+                                    </tfoot>
+
+                                </table>
+
+
                             </div>
-                            
-                            
-                            
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default glyphicon glyphicon-usd">Facturer</button>
+
+
+                            <!-- Bouton produisant la facture -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default glyphicon glyphicon-usd">Facturer</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Modal renouvelement de l'abonnement -->
-            <div class="modal fade" id="popupAbonnement" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Renouvelement de l'abonnement</h4>
-                        </div>
-                        <div class="modal-body">
+                <!-- Modal renouvelement de l'abonnement -->
+                <div class="modal fade" id="popupAbonnement" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Renouvelement de l'abonnement</h4>
+                            </div>
+                            <div class="modal-body">
 
-                            Detail de la facture ... 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal vente de mobilier -->
-            <div class="modal fade" id="popupMobilier" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Vente de Mobilier</h4>
-                        </div>
-                        <div class="modal-body">
-                            Detail de la facture ... 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                Detail de la facture ... 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Modal vente de Divers -->
-            <div class="modal fade" id="popupDivers" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Ventes Diverses</h4>
-                        </div>
-                        <div class="modal-body">
-
-                            Detail de la facture ... 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal vente de Materiaux -->
-            <div class="modal fade" id="popupMateriaux" tabindex="-1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Vente de Materiaux</h4>
-                        </div>
-                        <div class="modal-body">
-
-                            Detail de la facture ... 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!-- Modal vente de mobilier -->
+                <div class="modal fade" id="popupMobilier" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Vente de Mobilier</h4>
+                            </div>
+                            <div class="modal-body">
+                                Detail de la facture ... 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal vente de Divers -->
+                <div class="modal fade" id="popupDivers" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Ventes Diverses</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                Detail de la facture ... 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal vente de Materiaux -->
+                <div class="modal fade" id="popupMateriaux" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Vente de Materiaux</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                Detail de la facture ... 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
+            <script src="vendor/js/jquery-1.11.0.min.js"></script>
+            <script src="vendor/boostrap/js/bootstrap.min.js"></script>
+            <script src="vendor/js/controleur.js"></script>
 
-        <script src="vendor/js/jquery-1.11.0.min.js"></script>
-        <script src="vendor/boostrap/js/bootstrap.min.js"></script>
-        <script src="vendor/js/controleur.js"></script>
-
-        <script>
-            $(function () { 
-                $("[data-toggle='tooltip']").tooltip();
-            });
-        </script>
+            <script>
+                $(function () { 
+                    $("[data-toggle='tooltip']").tooltip();
+                });
+            </script>
 
 
 
-        <script>
-            $(function () { 
-                $("[data-toggle='button']").button();
-            });
-        </script>
+            <script>
+                $(function () { 
+                    $("[data-toggle='button']").button();
+                });
+            </script>
 
 
 
-        <script>
-            $(function () { 
-                $("[data-toggle='collapse']").collapse();
-            });
-        </script>
+            <script>
+                $(function () { 
+                    $("[data-toggle='collapse']").collapse();
+                });
+            </script>
     </body>
 </html>
