@@ -11,6 +11,7 @@
     </head>
     <body>
         <div class="container-fluid">
+                            
 
             <div class="row">
                 <div class="col-md-2 col-md-offset-0">
@@ -72,30 +73,30 @@
                                             <tbody>
                                                 <tr class="success">
                                                     <th>1</th>
-                                                    <th>Vente de livres</th>
+                                                    <th><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupLivre">Vente de Livres</a></th>
                                                     <th>100.00</th>
                                                 </tr>
                                                 <tr class="active">
                                                     <th>2</th>
-                                                    <th>Frais d'abonnement</th>
+                                                    <th><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupAbonnement">Renouvelement de l'abonnement</a></th>
                                                     <th>10.00</th>
                                                 </tr>
                                                 <tr class="success">
                                                     <th>3</th>
-                                                    <th>Vente de mobilier</th>
+                                                    <th><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupMobilier">Vente de mobilier</a></th>
                                                     <th>2500.00</th>
                                                 </tr>
                                                 <tr class="active">
                                                     <th>4</th>
-                                                    <th>Vente diverse</th>
+                                                    <th><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupDivers">Vente Diverses</a></th>
                                                     <th>300.00</th>
                                                 </tr>
                                                 <tr class="success">
                                                     <th>5</th>
-                                                    <th>Vente de materiaux</th>
+                                                    <th><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupMateriaux">Vente de Materiaux</a></th>
                                                     <th>600.00</th>
                                                 </tr>
-                                                
+
                                             </tbody>
                                             <tfoot>
                                                 <tr class="active">
@@ -141,7 +142,7 @@
                                                     <th>Recompensse de Reference d'abonnement</th>
                                                     <th>10.00</th>
                                                 </tr>
-                                                
+
                                             </tbody>
                                             <tfoot>
                                                 <tr class="active">
@@ -150,6 +151,8 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
+                                        
+                      
                                     </div>
 
                                 </div>
@@ -214,6 +217,105 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+              
+
+			<!-- Modal vente de livre -->
+			<div class="modal fade" id="popupLivre" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Vente de Livre</h4>
+				  </div>
+				  <div class="modal-body">
+                                      
+                                      Detail de la facture ... mettre un simple tableau avec aussi des fonctionnalite pour emmetre la facture ou une note
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+                        
+                        <!-- Modal renouvelement de l'abonnement -->
+			<div class="modal fade" id="popupAbonnement" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Renouvelement de l'abonnement</h4>
+				  </div>
+				  <div class="modal-body">
+                                      
+                                      Detail de la facture ... 
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+            
+                         <!-- Modal vente de mobilier -->
+			<div class="modal fade" id="popupMobilier" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Vente de Mobilier</h4>
+				  </div>
+				  <div class="modal-body">
+                                      
+                                      Detail de la facture ... 
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+                         
+                          <!-- Modal vente de Divers -->
+			<div class="modal fade" id="popupDivers" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Ventes Diverses</h4>
+				  </div>
+				  <div class="modal-body">
+                                      
+                                      Detail de la facture ... 
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+                          
+                          <!-- Modal vente de Materiaux -->
+			<div class="modal fade" id="popupMateriaux" tabindex="-1" role="dialog">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Vente de Materiaux</h4>
+				  </div>
+				  <div class="modal-body">
+                                      
+                                      Detail de la facture ... 
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
 
         </div>
 
@@ -227,11 +329,7 @@
             });
         </script>
 
-        <script>
-            $(function () { 
-                $("[data-toggle='popovers']").popovers();
-            });
-        </script>
+      
 
         <script>
             $(function () { 
@@ -239,11 +337,7 @@
             });
         </script>
 
-        <script>
-            $(function () { 
-                $("[data-toggle='tabs']").tabs();
-            });
-        </script>
+        
 
         <script>
             $(function () { 
