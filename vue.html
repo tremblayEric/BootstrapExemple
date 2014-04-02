@@ -231,6 +231,7 @@
                             <h4 class="modal-title">Vente de Livre</h4>
                         </div>
                         <div class="modal-body">
+                        <div id="result">
                             <div class="row">
                                 <!-- Facture de livres -->
                                 <div class="col-md-3">
@@ -251,7 +252,7 @@
                                 <div class="col-md-7 col-md-offset-2">
 
 
-                                    <table class="table table-hover table-condensed">
+                                    <table id="result" class="table table-hover table-condensed">
                                         <thead>
                                             <tr>
                                                 <th>Facture</th>
@@ -327,8 +328,9 @@
 
                             <!-- Bouton produisant la facture -->
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default btn-lg glyphicon glyphicon-usd"> Facturer</button>
+                                <button id="facturer" type="button" class="btn btn-default btn-lg glyphicon glyphicon-usd"> Facturer</button>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -409,10 +411,11 @@
                 </div>
 
             </div>
+        </div>
 
             <script src="vendor/js/jquery-1.11.0.min.js"></script>
             <script src="vendor/boostrap/js/bootstrap.min.js"></script>
-            <script src="vendor/js/controleur.js"></script>
+            <script src="js/controleur.js"></script>
 
             <script>
                 $(function () { 
