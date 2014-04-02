@@ -2,24 +2,39 @@
 //Eric Tremblay TREE13057906
 //Ricardo Solon SOLJ06048503
 
-
-$("#facturer").on('click', function(event) {
+var oldData = undefined;
+var callback = function(event){
 	event.preventDefault();
+	oldData = $("#result");
 	$( "#result" ).replaceWith(dataTable);
+}
+
+
+$("#facturer").on('click', callback);
+
+$(".close").on('click',function(event){
+	event.preventDefault();
+	if(oldData != undefined){
+		$("#table1").replaceWith(oldData);
+		oldData = undefined;
+		$("#facturer").on('click', callback);
+	}
 });
+
+
+
 
 
 /*
 A faire
-sauvegarder contenu original
-reactiviter au moment de cliquer sur X du modal pour remettre contenu original et revenir a zero
 reactivite au moment de jouer dans le tableau ?
+feedback visuel au moment de la facture
 */
 
 
 
 //NOT SAFE FOR PRODUCTION 
-var dataTable = "<div class='row'>"+
+var dataTable = "<div id='table1' class='row'>"+
       "<div class='table-responsive'>"+
         "<table class='table table-striped'>"+
           "<thead>"+
