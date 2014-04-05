@@ -8,7 +8,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Changement d'addresse</title>
+        <title>Dossier Comptable</title>
         <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
@@ -18,9 +18,9 @@
             <div class="row">
                 <!-- Liste de client -->
                 <div class="col-md-2 col-md-offset-0">
-                    <label for="prenom">Membres</label>
+                    <label for="numeroDossier">Membres</label>
                     <div class="input-group">
-                        <input list="membres" type="text" class="form-control" id="prenom" placeholder="#membre" autocomplete="on">
+                        <input list="membres" type="text" class="form-control" id="numeroDossier" placeholder="#membre" autocomplete="on">
                         <datalist id="membres">
                             <option value="00110"/>
                             <option value="00120"/>
@@ -233,212 +233,219 @@
                             <h4 class="modal-title">Vente de Livre</h4>
                         </div>
                         <div class="modal-body">
-                        <div id="result">
-                            <div class="row">
-                                <!-- Facture de livres -->
-                                <div class="col-md-3">
-                                    <address>
-                                        <strong>Ti Bob</strong><br>
-                                        1234 Elm Street<br>
-                                        Silent Hill, Qc, Ca<br>
-                                        H0H 0H0<br>
-                                        <abbr title="Phone">TEL:</abbr> (123) 456-7890
-                                    </address>
+                            <div id="result">
+                                <div class="row">
+                                    <!-- Facture de livres -->
+                                    <div class="col-md-3">
+                                        <table class="table-condensed">
+                                            <address>
+                                                <strong>Ti Bob</strong><br>
+                                                <i>1234 Elm Street</i><br>
+                                                <i>Silent Hill, Qc, Ca</i><br>
+                                                <i>H0H 0H0</i><br>
+                                                <abbr title="Phone">TEL:</abbr> (123) 456-7890
+                                                <address>
+                                                    <a href="mailto:#">unCourriel@live.ca</a>
+                                                </address>
+                                            </address>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-7 col-md-offset-2">
 
-                                    <address>
-                                        <strong>Courriel</strong><br>
-                                        <a href="mailto:#">unCourriel@live.ca</a>
-                                    </address>
+
+                                        <table id="result" class="table table-hover table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Facture</th>
+                                                    <th>Numero de Membre</th>
+                                                    <th>Numero de compte</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="info">
+                                                    <th>12923737</th>
+                                                    <th>001010</th>
+                                                    <th>Dossier 1</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
                                 </div>
-                                <div class="col-md-7 col-md-offset-2">
 
-
-                                    <table id="result" class="table table-hover table-condensed">
-                                        <thead>
-                                            <tr>
-                                                <th>Facture</th>
-                                                <th>Numero de Membre</th>
-                                                <th>Numero de compte</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="info">
-                                                <th>12923737</th>
-                                                <th>001010</th>
-                                                <th>Dossier 1</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div id='table1' class='row'>
+                                    <div class='table-responsive'>
+                                        <table class='table table-hover table-condensed'>
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Nom du Produit</th>
+                                                    <th>Quantite</th>
+                                                    <th>Prix Unitaire</th>
+                                                    <th>Montant</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="info">
+                                                    <td>1</td>
+                                                    <td>item 1</td>
+                                                    <td>5</td>
+                                                    <td><input id='item1Prix' type='text' name='item1Prix' value='10.00' placeholder='0.0'></td>
+                                                    <td><input id='montant1' type='text' name='montant1' value='50.00' placeholder='0.0' disabled></td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <td>2</td>
+                                                    <td>item 2</td>
+                                                    <td>5</td>
+                                                    <td><input id='item2Prix' type='text' name='item2Prix' value='10.00' placeholder='0.0'></td>
+                                                    <td><input id='montant2' type='text'  name='montant2' value='50.00' placeholder='0.0' disabled></td>
+                                                </tr>
+                                                <tr class="info" >
+                                                    <td>3</td>
+                                                    <td>item 3</td>
+                                                    <td>5</td>
+                                                    <td><input id='item3Prix' type='text' name='item3Prix' value='10.00' placeholder='0.0'></td>
+                                                    <td><input id='montant3' type='text' name='montant3' value='50.00' placeholder='0.0' disabled></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr class="active">
+                                                    <td colspan='3'></td>
+                                                    <td >TPS</td>
+                                                    <td ><input id='montant3' type='text' name='montant3' value='5.00' placeholder='0.0' disabled></td>
+                                                </tr>
+                                                <tr class="info">
+                                                    <td colspan='3'></td>
+                                                    <td>TVQ</td>
+                                                    <td ><input id='montant3' type='text' name='montant3' value='2.50' placeholder='0.0' disabled></td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <td colspan='3'></td>
+                                                    <td>Sous-Total</td>
+                                                    <td><input id='montant3' type='text' name='montant3' value='7.50' placeholder='0.0' disabled></td>
+                                                </tr>
+                                                <tr class="info">
+                                                    <td colspan='3'></td>
+                                                    <td >Total</td>
+                                                    <td ><input id='montant3' type='text' name='montant3' value='10000.00' placeholder='0.0' disabled></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
 
-                            </div>
 
-                            <div class="row">
-                                <table class="table table-hover table-condensed">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Nom du Produit</th>
-                                            <th>Prix</th>
-                                            <th>Quantite</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="info">
-                                            <th>2014-01-12</th>
-                                            <th>Le Seigneur des Anneaux</th>
-                                            <th>50.00</th>
-                                            <th>1</th>
-                                            <th>50.00</th>
-                                        </tr>
-                                        <tr class="active">
-                                            <th>2014-01-12</th>
-                                            <th>Les recettes de Tante Hilda</th>
-                                            <th>15.00</th>
-                                            <th>1</th>
-                                            <th>5.00</th>
-                                        </tr>
-                                        <tr class="info">
-                                            <th>2014-01-12</th>
-                                            <th>Le Hobbit</th>
-                                            <th>15.00</th>
-                                            <th>1</th>
-                                            <th>15.00</th>
-                                        </tr>
-                                        <tr class="active">
-                                            <th>2014-01-12</th>
-                                            <th>Coder Proprement</th>
-                                            <th>10.00</th>
-                                            <th>3</th>
-                                            <th>30.00</th>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr class="active">
-                                            <th colspan="4" class="text-right">Grand Total</th>
-                                            <th>100.00</th>
-                                        </tr>
-                                    </tfoot>
-
-                                </table>
-
-
-                            </div>
-
-
-                            <!-- Bouton produisant la facture -->
-                            <div class="modal-footer">
-                                <button id="facturer" type="button" class="btn btn-default btn-lg glyphicon glyphicon-usd"> Facturer</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal renouvelement de l'abonnement -->
-                <div class="modal fade" id="popupAbonnement" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Renouvelement de l'abonnement</h4>
-                            </div>
-                            <div class="modal-body">
-
-                                Detail de la facture ... 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <!-- Bouton produisant la facture -->
+                                <div class="modal-footer">
+                                    <button id="facturer" type="button" class="btn btn-default btn-lg glyphicon glyphicon-usd"> Facturer</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal vente de mobilier -->
-                <div class="modal fade" id="popupMobilier" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Vente de Mobilier</h4>
-                            </div>
-                            <div class="modal-body">
-                                Detail de la facture ... 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal vente de Divers -->
-                <div class="modal fade" id="popupDivers" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Ventes Diverses</h4>
-                            </div>
-                            <div class="modal-body">
-
-                                Detail de la facture ... 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal vente de Materiaux -->
-                <div class="modal fade" id="popupMateriaux" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Vente de Materiaux</h4>
-                            </div>
-                            <div class="modal-body">
-
-                                Detail de la facture ... 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Modal renouvelement de l'abonnement -->
+            <div class="modal fade" id="popupAbonnement" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Renouvelement de l'abonnement</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            Detail de la facture ... 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal vente de mobilier -->
+            <div class="modal fade" id="popupMobilier" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Vente de Mobilier</h4>
+                        </div>
+                        <div class="modal-body">
+                            Detail de la facture ... 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal vente de Divers -->
+            <div class="modal fade" id="popupDivers" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Ventes Diverses</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            Detail de la facture ... 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal vente de Materiaux -->
+            <div class="modal fade" id="popupMateriaux" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Vente de Materiaux</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            Detail de la facture ... 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-            <script src="vendor/js/jquery-1.11.0.min.js"></script>
-            <script src="vendor/boostrap/js/bootstrap.min.js"></script>
-            <script src="js/controleur.js"></script>
+        <script src="vendor/js/jquery-1.11.0.min.js"></script>
+        <script src="vendor/boostrap/js/bootstrap.min.js"></script>
+        <script src="js/controleur.js"></script>
 
-            <script>
-                $(function () { 
-                    $("[data-toggle='tooltip']").tooltip();
-                });
-            </script>
-
-
-
-            <script>
-                $(function () { 
-                    $("[data-toggle='button']").button();
-                });
-            </script>
+        <script>
+            $(function () { 
+                $("[data-toggle='tooltip']").tooltip();
+            });
+        </script>
 
 
 
-            <script>
-                $(function () { 
-                    $("[data-toggle='collapse']").collapse();
-                });
-            </script>
+        <script>
+            $(function () { 
+                $("[data-toggle='button']").button();
+            });
+        </script>
+
+
+
+        <script>
+            $(function () { 
+                $("[data-toggle='collapse']").collapse();
+            });
+        </script>
     </body>
 </html>
