@@ -42,25 +42,34 @@ $(".modifiable").on("change",calculTotal);
 
 $("#facturer").on('click', function(){
     
-    ("#popupLivre").modal("hide");
+    $("#popupLivre").modal("hide");
+    
+   
+    $("#popupBar").modal("show");
+    var complete = 0;
+    
+    while(complete != 100){
+        
+        setTimeout(function () {
+       complete++;
+        $(".progress-bar").css("width",complete + "%");
+    }, 500);
+        
+    }
     
 });
 
 
-//<div class="progress progress-striped active">
-//  <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-//    <span class="sr-only">45% Complete</span>
-//  </div>
-//</div>
+
 
 
 $(".close").on('click',function(event){
-	event.preventDefault();
-	if(oldData != undefined){
-		$("#table1").replaceWith(oldData);
-		oldData = undefined;
-		$("#facturer").on('click', callback);
-	}
+    event.preventDefault();
+    if(oldData != undefined){
+        $("#table1").replaceWith(oldData);
+        oldData = undefined;
+        $("#facturer").on('click', callback);
+    }
 });
 
 
