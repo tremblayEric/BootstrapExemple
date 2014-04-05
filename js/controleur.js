@@ -32,13 +32,26 @@ var calculTotal = function(event){
     
     var totalAvecTPSetTVQ = totalAvecTPS + tvq;
     
-    $("#tps").val(tps);
-    $("#tvq").val(tvq);
+    $("#tps").val(tps.toFixed(2));
+    $("#tvq").val(tvq.toFixed(2));
     $("#sousTotal").val((tps + tvq).toFixed(2));
     $("#total").val((totalAvecTPSetTVQ).toFixed(2));  
     
+    var venteLivre = parseFloat(totalAvecTPSetTVQ.toFixed(2));
+    var venteAbonnement = parseFloat($("#montantAbonnement").text());
+    var venteMobilier = parseFloat($("#montantMobilier").text());
+    var venteDiverse = parseFloat($("#montantDiverse").text());
+    var venteMateriaux=  parseFloat($("#montantMateriaux").text());
     
-    $("#montantVente").text(totalAvecTPSetTVQ.toFixed(2));
+    var totalVentes = 
+        venteLivre + 
+        venteAbonnement + 
+        venteMobilier +
+        venteDiverse + 
+        venteMateriaux;
+    
+    $("#montantLivres").text(venteLivre.toFixed(2));
+    $("#totalVentes").text(totalVentes.toFixed(2));
     
 }
 
@@ -71,7 +84,7 @@ $("#facturer").on('click', function(){
     
     
     
-   
+  calculTotal(); 
     
    
     
