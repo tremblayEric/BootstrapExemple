@@ -2,8 +2,6 @@
 //Eric Tremblay TREE13057906
 //Ricardo Solon SOLJ06048503
 
-var oldData = undefined;
-
 $("#numeroDossier").on("change",function(){
     
     if($("#numeroDossier").val() != ""){
@@ -14,16 +12,15 @@ $("#numeroDossier").on("change",function(){
     
 });
 
-var calculTotal = function(event){
-    event.preventDefault();
+var calculTotal = function(){
     
-    var prixItem_1 = $("#item1Prix").val();
-    var prixItem_2 = $("#item2Prix").val();
-    var prixItem_3 = $("#item3Prix").val();
+    var prixItem_1 = +$("#item1Prix").val();
+    var prixItem_2 = +$("#item2Prix").val();
+    var prixItem_3 = +$("#item3Prix").val();
     
-    var qteItem1 = $("#qteItem1").val();
-    var qteItem2 = $("#qteItem2").val();
-    var qteItem3 = $("#qteItem3").val();
+    var qteItem1 = +$("#qteItem1").val();
+    var qteItem2 = +$("#qteItem2").val();
+    var qteItem3 = +$("#qteItem3").val();
     
     var totalItem1 = prixItem_1 * qteItem1;
     var totalItem2 = prixItem_2 * qteItem2;
@@ -47,10 +44,10 @@ var calculTotal = function(event){
     $("#total").val((totalAvecTPSetTVQ).toFixed(2));  
     
     var venteLivre = parseFloat(totalAvecTPSetTVQ.toFixed(2));
-    var venteAbonnement = parseFloat($("#montantAbonnement").text());
-    var venteMobilier = parseFloat($("#montantMobilier").text());
-    var venteDiverse = parseFloat($("#montantDiverse").text());
-    var venteMateriaux=  parseFloat($("#montantMateriaux").text());
+    var venteAbonnement = parseFloat(+$("#montantAbonnement").text());
+    var venteMobilier = parseFloat(+$("#montantMobilier").text());
+    var venteDiverse = parseFloat(+$("#montantDiverse").text());
+    var venteMateriaux=  parseFloat(+$("#montantMateriaux").text());
     
     var totalVentes = 
         venteLivre + 
@@ -64,7 +61,7 @@ var calculTotal = function(event){
     
 }
 
-$(".modifiable").on("change",calculTotal);
+$(".modifiable").on("change keyup",calculTotal);
 
 $("#facturer").on('click', function(){
    
@@ -84,35 +81,14 @@ $("#facturer").on('click', function(){
         complete++;
     }
     
-    
      setTimeout(function () {
          
-         $("#popupBar").modal("hide")
+         $("#popupBar").modal("hide");
          $(".progress-bar").css("width","0%");
  },1500);   
-    
-    
-    
+        
   calculTotal(); 
-    
-   
-    
+      
 });
-
-
-
-
-
-$(".close").on('click',function(event){
-    event.preventDefault();
-    if(oldData != undefined){
-        $("#table1").replaceWith(oldData);
-        oldData = undefined;
-        $("#facturer").on('click', callback);
-    }
-});
-
-
-
 
 
