@@ -3,14 +3,56 @@
 //Ricardo Solon SOLJ06048503
 
 var oldData = undefined;
-var callback = function(event){
-	event.preventDefault();
-	oldData = $("#result");
-	$( "#result" ).replaceWith(dataTable);
+
+
+var calculTotal = function(event){
+    event.preventDefault();
+    
+    var prixItem_1 = $("#item1Prix").val();
+    var prixItem_2 = $("#item2Prix").val();
+    var prixItem_3 = $("#item3Prix").val();
+    
+    var qteItem1 = $("#qteItem1").val();
+    var qteItem2 = $("#qteItem2").val();
+    var qteItem3 = $("#qteItem3").val();
+    
+    var totalItem1 = prixItem_1 * qteItem1;
+    var totalItem2 = prixItem_2 * qteItem2;
+    var totalItem3 = prixItem_3 * qteItem3;
+    
+    $("#montant1").val(totalItem1);
+    $("#montant2").val(totalItem2);
+    $("#montant3").val(totalItem3);
+    
+    
+    var totalAvantTPS = totalItem1 + totalItem2 + totalItem3;
+    var tps = (totalAvantTPS * 0.05);
+    var totalAvecTPS = totalAvantTPS + tps;
+    var tvq = (totalAvecTPS * 0.0975);
+    
+    var totalAvecTPSetTVQ = totalAvecTPS + tvq;
+    
+    $("#tps").val(tps);
+    $("#tvq").val(tvq);
+    $("#sousTotal").val((tps + tvq).toFixed(2));
+    $("#total").val((totalAvecTPSetTVQ).toFixed(2));   
 }
 
+$(".modifiable").on("change",calculTotal);
 
-$("#facturer").on('click', callback);
+$("#facturer").on('click', function(){
+    
+    ("#popupLivre").modal("hide");
+    
+});
+
+
+//<div class="progress progress-striped active">
+//  <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+//    <span class="sr-only">45% Complete</span>
+//  </div>
+//</div>
+
 
 $(".close").on('click',function(event){
 	event.preventDefault();
@@ -23,73 +65,5 @@ $(".close").on('click',function(event){
 
 
 
-//$('#numeroDossier').on('input', function(){
-//console.log('this actually works');
-//});
 
 
-/*
-A faire
-reactivite au moment de jouer dans le tableau ?
-feedback visuel au moment de la facture
-*/
-
-
-
-//NOT SAFE FOR PRODUCTION 
-//var dataTable = 
-  
-  
-  
-//  <div class="row">
-//                                <table class="table table-hover table-condensed">
-//                                    <thead>
-//                                        <tr>
-//                                            <th>Date</th>
-//                                            <th>Nom du Produit</th>
-//                                            <th>Prix Unitaire</th>
-//                                            <th>Quantite</th>
-//                                            <th>Montant</th>
-//                                        </tr>
-//                                    </thead>
-//                                    <tbody>
-//                                        <tr class="info">
-//                                            <th>2014-01-12</th>
-//                                            <th>Le Seigneur des Anneaux</th>
-//                                            <th>50.00</th>
-//                                            <th>1</th>
-//                                            <th>50.00</th>
-//                                        </tr>
-//                                        <tr class="active">
-//                                            <th>2014-01-12</th>
-//                                            <th>Les recettes de Tante Hilda</th>
-//                                            <th>15.00</th>
-//                                            <th>1</th>
-//                                            <th>5.00</th>
-//                                        </tr>
-//                                        <tr class="info">
-//                                            <th>2014-01-12</th>
-//                                            <th>Le Hobbit</th>
-//                                            <th>15.00</th>
-//                                            <th>1</th>
-//                                            <th>15.00</th>
-//                                        </tr>
-//                                        <tr class="active">
-//                                            <th>2014-01-12</th>
-//                                            <th>Coder Proprement</th>
-//                                            <th>10.00</th>
-//                                            <th>3</th>
-//                                            <th>30.00</th>
-//                                        </tr>
-//                                    </tbody>
-//                                    <tfoot>
-//                                        <tr class="active">
-//                                            <th colspan="4" class="text-right">Grand Total</th>
-//                                            <th>100.00</th>
-//                                        </tr>
-//                                    </tfoot>
-//
-//                                </table>
-//
-//
-//                            </div>
