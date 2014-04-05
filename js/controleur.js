@@ -35,7 +35,11 @@ var calculTotal = function(event){
     $("#tps").val(tps);
     $("#tvq").val(tvq);
     $("#sousTotal").val((tps + tvq).toFixed(2));
-    $("#total").val((totalAvecTPSetTVQ).toFixed(2));   
+    $("#total").val((totalAvecTPSetTVQ).toFixed(2));  
+    
+    
+    $("#montantVente").text(totalAvecTPSetTVQ.toFixed(2));
+    
 }
 
 $(".modifiable").on("change",calculTotal);
