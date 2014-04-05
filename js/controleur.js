@@ -41,21 +41,35 @@ var calculTotal = function(event){
 $(".modifiable").on("change",calculTotal);
 
 $("#facturer").on('click', function(){
-    
+   
+   
     $("#popupLivre").modal("hide");
     
    
     $("#popupBar").modal("show");
     var complete = 0;
     
-    while(complete != 100){
+    while(complete <= 100){
         
         setTimeout(function () {
-       complete++;
+       
         $(".progress-bar").css("width",complete + "%");
-    }, 500);
-        
+    }, 1000);
+        complete++;
     }
+    
+    
+     setTimeout(function () {
+         
+         $("#popupBar").modal("hide")
+         $(".progress-bar").css("width","0%");
+ },1500);   
+    
+    
+    
+   
+    
+   
     
 });
 
