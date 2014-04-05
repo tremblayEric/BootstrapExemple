@@ -4,6 +4,15 @@
 
 var oldData = undefined;
 
+$("#numeroDossier").on("change",function(){
+    
+    if($("#numeroDossier").val() != ""){
+        
+       $("#page").show(); 
+        
+    }
+    
+});
 
 var calculTotal = function(event){
     event.preventDefault();
