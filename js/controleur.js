@@ -63,6 +63,8 @@ var calculTotal = function(){
 
 $(".modifiable").on("change keyup",calculTotal);
 
+$("#facturer").hide();
+
 $("#facturer").on('click', function(){
    
    
@@ -88,7 +90,15 @@ $("#facturer").on('click', function(){
  },1500);   
         
   calculTotal(); 
+  $("#facturer").hide();
       
 });
+
+
+$("#idProjet").on('change keyup',function(){
+    $("#facturer").show();
+});
+
+
 
 
