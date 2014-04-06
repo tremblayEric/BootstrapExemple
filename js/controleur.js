@@ -69,6 +69,7 @@ $(".modifiable").on("change keyup",calculTotal);
 $("#facturer").hide();
 $("#projetFacture").hide();
 $(".inputCredit").hide();
+$(".projetFacture1").hide();
 
 $("#facturer").on('click', function(){
    
@@ -108,6 +109,7 @@ $("#idProjet").on('change keyup',function(event){
     }
    
    $("#projetFacture").find("span").text(valeurTxT);
+   $(".projetFacture1").show();
    $("#projetFacture").show();
 });
 
