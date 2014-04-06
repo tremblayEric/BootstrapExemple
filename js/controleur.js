@@ -63,10 +63,12 @@ var calculTotal = function(){
     
 }
 
+
 $(".modifiable").on("change keyup",calculTotal);
 
 $("#facturer").hide();
 $("#projetFacture").hide();
+$(".inputCredit").hide();
 
 $("#facturer").on('click', function(){
    
@@ -109,6 +111,48 @@ $("#idProjet").on('change keyup',function(event){
    $("#projetFacture").show();
 });
 
+$("#btnNoteCredit").on('click',function(){
+    $(".inputCredit").show();
+    $("#btnNoteCredit").hide();
+});
 
+$('input[class="inputCredit"]').on('change',function(){
+     var input = $(this);
+     var valeur = +input.val();
+     var inputMontant = input.closest('tr').find('input[id^="montant"]');
+     var inputMontantVal = +inputMontant.val();
+     var montantFinal = 0.00;
+     var totalNote = 0.00;
+     var inputMontantTotal = 0.00;
+
+     if(valeur <= inputMontantVal){
+
+        var noteCreditTotal = +$("#noteCredit").val();
+        var montants = $('input[id^="montant"]');
+        
+        montantFinal = inputMontantVal - valeur;
+        inputMontant.val(montantFinal.toFixed(2));
+      
+        $.each($('input[class="inputCredit"]'), function(index, val) {
+             totalNote = totalNote + parseFloat(val.value);
+             $("#noteCredit").val(parseFloat(totalNote).toFixed(2));
+        });
+
+
+        $.each(montants,function(index,val){
+            inputMontantTotal = inputMontantTotal + parseFloat(val.value);
+        });
+
+        var tps = inputMontantTotal * 0.05;
+        $("#tps").val(parseFloat(tps).toFixed(2));
+        var tvq = (tps + inputMontantTotal) * 0.0975;
+        $("#tvq").val(parseFloat(tvq).toFixed(2));
+        inputMontantTotal = inputMontantTotal + tps + tvq;
+        $("#sousTotal").val( parseFloat(+$("#tvq").val() +  +$("#tps").val()).toFixed(2));
+        $("#total").val(parseFloat(inputMontantTotal).toFixed(2));
+
+     }
+
+});
 
 

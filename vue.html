@@ -312,9 +312,10 @@
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Nom du Produit</th>
-                                                    <th>Quantite</th>
+                                                    <th>Quantité</th>
                                                     <th>Prix Unitaire</th>
                                                     <th>Montant</th>
+                                                    <th class="inputCredit">Note de Crédit</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -324,6 +325,7 @@
                                                     <td><input class="modifiable" type="text" id="qteItem1" value="5"/></td>
                                                     <td><input class="modifiable" id='item1Prix' type='text' name='item1Prix' value='10.00' placeholder='0.0'></td>
                                                     <td><input id='montant1' type='text' name='montant1' value='50.00' placeholder='0.0' disabled></td>
+                                                    <td><input class="inputCredit" type="text" name="" value="0.00" placeholder="0.00"></td>
                                                 </tr>
                                                 <tr class="active">
                                                     <td>2</td>
@@ -331,6 +333,7 @@
                                                     <td> <input class="modifiable"  type="text" id="qteItem2" value="5"/></td>
                                                     <td><input class="modifiable" id='item2Prix' type='text' name='item2Prix' value='10.00' placeholder='0.0'></td>
                                                     <td><input id='montant2' type='text'  name='montant2' value='50.00' placeholder='0.0' disabled></td>
+                                                    <td><input class="inputCredit" type="text" name="" value="0.00" placeholder="0.00"></td>
                                                 </tr>
                                                 <tr class="info" >
                                                     <td>3</td>
@@ -338,6 +341,7 @@
                                                     <td><input class="modifiable" type="text" id="qteItem3" value="5"/></td>
                                                     <td><input class="modifiable" id='item3Prix' type='text' name='item3Prix' value='10.00' placeholder='0.0'></td>
                                                     <td><input id='montant3' type='text' name='montant3' value='50.00' placeholder='0.0' disabled></td>
+                                                    <td><input class="inputCredit" type="text" name="" value="0.00" placeholder="0.00"></td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
@@ -359,12 +363,12 @@
                                                 <tr class="info">
                                                     <td colspan="3"></td>
                                                     <td> Note de Crédit</td>
-                                                    <td><input class="modifiable" type="text" id="noteCredit" name="noteCredit" value="0.00" placeholder="0.00"></td>
+                                                    <td><input class="modifiable inputCredit" type="text" id="noteCredit" name="noteCredit" value="0.00" placeholder="0.00" disabled><button class=" btn btn-info" id="btnNoteCredit"type="button">Ajouter une Note de Crédit</button></td>
                                                 </tr>
                                                 <tr class="active">
                                                     <td colspan='3'></td>
                                                     <td >Total</td>
-                                                    <td ><input class="modifiable" id='total' type='text' name='montant3' value='10000.00' placeholder='0.0' disabled></td>
+                                                    <td ><input class="modifiable" id='total' type='text' name='montant3' value='157.50' placeholder='0.0' disabled></td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="4" rowspan="3"></td>
