@@ -21,6 +21,8 @@ var calculTotal = function(){
     var qteItem1 = +$("#qteItem1").val();
     var qteItem2 = +$("#qteItem2").val();
     var qteItem3 = +$("#qteItem3").val();
+
+    var noteCredit = +$("#noteCredit").val();
     
     var totalItem1 = prixItem_1 * qteItem1;
     var totalItem2 = prixItem_2 * qteItem2;
@@ -36,7 +38,7 @@ var calculTotal = function(){
     var totalAvecTPS = totalAvantTPS + tps;
     var tvq = (totalAvecTPS * 0.0975);
     
-    var totalAvecTPSetTVQ = totalAvecTPS + tvq;
+    var totalAvecTPSetTVQ = (totalAvecTPS + tvq) - noteCredit;
     
     $("#tps").val(tps.toFixed(2));
     $("#tvq").val(tvq.toFixed(2));
@@ -105,7 +107,6 @@ $("#idProjet").on('change keyup',function(event){
    
    $("#projetFacture").find("span").text(valeurTxT);
    $("#projetFacture").show();
-
 });
 
 
