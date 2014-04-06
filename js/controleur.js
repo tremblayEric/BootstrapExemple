@@ -4,7 +4,7 @@
 
 $("#numeroDossier").on("change",function(){
     
-    if($("#numeroDossier").val() != ""){
+    if($(this).val() != ""){
         
        $("#page").show(); 
         
@@ -64,6 +64,7 @@ var calculTotal = function(){
 $(".modifiable").on("change keyup",calculTotal);
 
 $("#facturer").hide();
+$("#projetFacture").hide();
 
 $("#facturer").on('click', function(){
    
@@ -95,8 +96,16 @@ $("#facturer").on('click', function(){
 });
 
 
-$("#idProjet").on('change keyup',function(){
-    $("#facturer").show();
+$("#idProjet").on('change keyup',function(event){
+    event.preventDefault();
+    var valeurTxT = $(this).val();
+    if(valeurTxT !== ""){
+         $("#facturer").show();
+    }
+   
+   $("#projetFacture").find("span").text(valeurTxT);
+   $("#projetFacture").show();
+
 });
 
 
