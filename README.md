@@ -1,6 +1,4 @@
-# README
-
-##INF4150-30 : Interface personne machine
+#INF4150-30 : Interface personne machine
 ### Opérations Comptables élémentaires 
 ----------
 
@@ -10,5 +8,14 @@ Ricardo Solon SOLJ06048503
 
 Eric Tremblay TREE13057906
 
+####Prototype
 
-Ouvrez le fichier vue.html avec google Chrome. 
+Ouvrez le fichier vue.html avec google Chrome.
+
+####Tests
+
+à compléter....
+
+####Documentation
+
+à complété......
