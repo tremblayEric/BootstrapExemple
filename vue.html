@@ -20,26 +20,7 @@
                 <div class="col-md-2 col-md-offset-0">
                     <label for="numeroDossier">Membres</label>
                     <div class="input-group">
-                        <input list="membres" type="text" class="form-control" id="numeroDossier" placeholder="#membre" autocomplete="on" value="">
-                        <datalist id="membres">
-                            <option value="00110"/>
-                            <option value="00120"/>
-                            <option value="11000"/>
-                            <option value="12333"/>
-                            <option value="12344"/>
-                            <option value="22334"/>
-                            <option value="33323"/>
-                            <option value="34444"/>
-                            <option value="43334"/>
-                            <option value="55533"/>
-                            <option value="65555"/>
-                            <option value="66644"/>
-                            <option value="67990"/>
-                            <option value="76663"/>
-                            <option value="78999"/>
-                            <option value="87999"/>
-                            <option value="99887"/>
-                        </datalist>
+                        <input type="text" class="form-control" id="numeroDossier" placeholder="#membre" value="">
                     </div> 
                 </div>
             </div>
@@ -58,8 +39,8 @@
                         <div id="pan1" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
-                                    <li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+                                    <li class="active"><a href="#aPayer" data-toggle="tab">À recevoir</a></li>
+                                    <li><a href="#aRecevoir" data-toggle="tab">À payer</a></li>
                                 </ul>
 
                                 <!-- Liste des items au dossier -->
@@ -78,7 +59,7 @@
                                             <tbody>
                                                 <tr class="success">
                                                     <td>1</td>
-                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupLivre">Vente de Livres</a></td>
+                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupLivre">Vente de livres</a></td>
                                                     <td id="montantLivres">100.00</td>
                                                     <td id="projetFacture"><strong><span ></span></strong></td>
                                                 </tr>
@@ -96,13 +77,13 @@
                                                 </tr>
                                                 <tr class="active">
                                                     <td>4</td>
-                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupDivers">Vente Diverses</a></td>
+                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupDivers">Vente diverses</a></td>
                                                     <td id="montantDiverse">300.00</td>
                                                     <td class="projetFacture1"></td>
                                                 </tr>
                                                 <tr class="success">
                                                     <td>5</td>
-                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupMateriaux">Vente de Materiaux</a></td>
+                                                    <td><a href="#"  class="btn btn-xs btn-block" role="button" data-toggle="modal" data-target="#popupMateriaux">Vente de materiaux</a></td>
                                                     <td id="montantMateriaux">600.00</td>
                                                     <td class="projetFacture1"></td>
                                                 </tr>
@@ -140,7 +121,7 @@
                                                 </tr>
                                                 <tr class="danger">
                                                     <th>3</th>
-                                                    <th>Rabais Fidelite</th>
+                                                    <th>Rabais fidelite</th>
                                                     <th>10.00</th>
                                                 </tr>
                                                 <tr class="active">
@@ -150,7 +131,7 @@
                                                 </tr>
                                                 <tr class="danger">
                                                     <th>5</th>
-                                                    <th>Recompensse de Reference d'abonnement</th>
+                                                    <th>Récompensse de référence d'abonnement</th>
                                                     <th>10.00</th>
                                                 </tr>
 
@@ -179,8 +160,8 @@
                         <div id="pan2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
-                                    <li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+                                    <li class="active"><a href="#aPayer" data-toggle="tab">À recevoir</a></li>
+                                    <li><a href="#aRecevoir" data-toggle="tab">À payer</a></li>
                                 </ul>
 
                                 <!-- Tab panes -->
@@ -207,8 +188,8 @@
                         <div id="pan3" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#aPayer" data-toggle="tab">A Recevoir</a></li>
-                                    <li><a href="#aRecevoir" data-toggle="tab">A Payer</a></li>
+                                    <li class="active"><a href="#aPayer" data-toggle="tab">À recevoir</a></li>
+                                    <li><a href="#aRecevoir" data-toggle="tab">À payer</a></li>
                                 </ul>
 
                                 <!-- Tab panes -->
@@ -240,7 +221,7 @@
 				  <div class="modal-body">
                                       <div class="progress progress-striped active">
                                 <div  class="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
-                                    <span class="sr-only">0% Complete</span>
+                                    <span class="sr-only">0% Complété</span>
                                 </div>
                             </div>
                                       
@@ -265,7 +246,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Vente de Livre</h4>
+                            <h4 class="modal-title">Vente de livre</h4>
                         </div>
                         <div class="modal-body">
                             <div id="result">
@@ -292,7 +273,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Facture</th>
-                                                    <th>Numero de Membre</th>
+                                                    <th>Numero de membre</th>
                                                     <th>Numero de compte</th>
                                                 </tr>
                                             </thead>
@@ -314,11 +295,11 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Nom du Produit</th>
+                                                    <th>Nom du produit</th>
                                                     <th>Quantité</th>
-                                                    <th>Prix Unitaire</th>
+                                                    <th>Prix unitaire</th>
                                                     <th>Montant</th>
-                                                    <th class="inputCredit">Note de Crédit</th>
+                                                    <th class="inputCredit">Note de crédit</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -360,13 +341,13 @@
                                                 </tr>
                                                 <tr class="active">
                                                     <td colspan='3'></td>
-                                                    <td>Sous-Total</td>
+                                                    <td>Sous-total</td>
                                                     <td><input class="modifiable" id='sousTotal' type='text' name='montant3' value='7.50' placeholder='0.0' disabled></td>
                                                 </tr>
                                                 <tr class="info">
                                                     <td colspan="3"></td>
-                                                    <td> Note de Crédit</td>
-                                                    <td><input class="modifiable inputCredit" type="text" id="noteCredit" name="noteCredit" value="0.00" placeholder="0.00" disabled><button class=" btn btn-info" id="btnNoteCredit"type="button">Ajouter une Note de Crédit</button></td>
+                                                    <td> Note de crédit</td>
+                                                    <td><input class="modifiable inputCredit" type="text" id="noteCredit" name="noteCredit" value="0.00" placeholder="0.00" disabled><button class=" btn btn-info" id="btnNoteCredit"type="button">Ajouter une note de crédit</button></td>
                                                 </tr>
                                                 <tr class="active">
                                                     <td colspan='3'></td>
@@ -376,14 +357,9 @@
                                                 <tr>
                                                     <td colspan="4" rowspan="3"></td>
                                                     <td>
-                                                        <label for="idProjet">Choisir un Projet à facturer</label>
+                                                        <label for="idProjet">Choisir un projet à facturer</label>
                                                         <div class="input-group">
-                                                            <input list="projets" type="text" class="form-control" id="idProjet" placeholder="projet" autocomplete="on" value="">
-                                                            <datalist id="projets">
-                                                                <option value="Projet1"/>
-                                                                <option value="Projet2"/>
-                                                                <option value="Projet3"/>
-                                                            </datalist>
+                                                            <input type="text" class="form-control" id="idProjet" placeholder="projet" value="">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -428,7 +404,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Vente de Mobilier</h4>
+                            <h4 class="modal-title">Vente de mobilier</h4>
                         </div>
                         <div class="modal-body">
                             Detail de la facture ... 
@@ -446,7 +422,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Ventes Diverses</h4>
+                            <h4 class="modal-title">Ventes diverses</h4>
                         </div>
                         <div class="modal-body">
 
@@ -465,7 +441,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Vente de Materiaux</h4>
+                            <h4 class="modal-title">Vente de materiaux</h4>
                         </div>
                         <div class="modal-body">
 
