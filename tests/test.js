@@ -33,12 +33,24 @@ casper.test.begin("Validation des accordeons", 2, function(test) {
     test.assertExists('#page');
     test.assertNotVisible('#page');
   });
-
   casper.run(function(){
     test.done();
   }
     );
 });
+
+
+casper.test.begin('Test des Liens des onglets de la  modale du Dossier 1',2, function suite(test) {
+    casper.start("../index.html", function() {
+    	test.assertExists('a[href="#aRecevoir"]');
+        test.assertExists('a[href="#aPayer"]');
+    });
+    
+    casper.run(function() {
+        test.done();
+    });
+});
+
 
 
 
