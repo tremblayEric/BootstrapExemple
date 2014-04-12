@@ -65,10 +65,10 @@ casper.test.begin('Test des Liens de l\'onglet \'A recevoir\' du Dossier 1',5, f
     });
 });
 
-casper.test.begin('Test  ouverture facture',5, function suite(test) {
+casper.test.begin('Test  ouverture facture', function suite(test) {
     casper.start("../index.html", function() {
 //    	test.assertExists('a[href="#livre"]');
-this.click("#livre a");
+this.click('a[href="#livre"]');
     	this.wait(500, function() {
 	    	test.assertVisible("#popupLivre");
 	    });
