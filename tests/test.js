@@ -14,6 +14,7 @@ casper.test.begin("Chargement de la page", 1, function(test) {
 });
 
 
+
 casper.test.begin("Validation du selecteur de client", 2, function(test) {
  
     casper.start('http://localhost:8000/vue.html', function(){
@@ -40,10 +41,40 @@ casper.test.begin("Validation des accordeons", 2, function(test) {
 });
 
 
+casper.test.begin('remplir le formulaire membres',1, function suite(test) {
+    casper.start("http://localhost:8000/vue.html", function() {
+        this.fillSelectors('#formMembres',{
+            '#numeroDossier' : '12345'
+        },false);
+        this.wait(500,function(){
+            test.assertFieldCSS("#numeroDossier", "12345");
+            this.capture('test.png');
+            this.click('#accordeonDossierUn');
+            this.wait(500,function(){
+                this.capture('test1a.png');
+                this.click('#aPopupLivre');
+                this.wait(500,function(){
+                    this.capture('test1b.png');
+                });
+            });
+            
+        });
+
+
+    });
+    
+    casper.run(function() {
+        test.done();
+    });
+});
+
+
+
 casper.test.begin('Test des Liens des onglets du Dossier 1',2, function suite(test) {
     casper.start("http://localhost:8000/vue.html", function() {
         test.assertExists('a[href="#aRecevoir"]');
         test.assertExists('a[href="#aPayer"]');
+
     });
     
     casper.run(function() {
@@ -58,6 +89,7 @@ casper.test.begin('Test des Liens de l\'onglet \'A recevoir\' du Dossier 1',5, f
         test.assertExists('a[href="#mobilier"]');
         test.assertExists('a[href="#divers"]');
         test.assertExists('a[href="#materiaux"]');
+         
     });
     
     casper.run(function() {
@@ -75,7 +107,7 @@ casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
             test.assertExists("#uneAdresse","L'adresse existe");
             test.assertVisible("#uneAdresse","L'adresse est visible");
             test.assertExists('a[href="mailto:#"]',"Il existe un courriel");
-            
+
             test.assertExists("#result","L'entete de la facture existe");
             test.assertVisible("#result","L'entete de la facutre est visible");
             test.assertVisible("#tableFacture","La table contenant la facture existe ");
@@ -114,6 +146,7 @@ casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
             //bouton note de credit
             test.assertExists('#btnNoteCredit',"Il existe un element  note de credit");
             test.assertEquals(this.getElementAttribute('#btnNoteCredit', 'type'),"button","L'element btnNoteCredit est un bouton");
+           
 
 
 });             
@@ -123,6 +156,10 @@ casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
         test.done();
     });
 });
+
+
+
+
 
 
 
