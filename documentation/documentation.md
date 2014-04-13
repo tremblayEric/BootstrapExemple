@@ -14,12 +14,12 @@
 
 #1.  **Introduction**
 
-Logiciel comptable permettant de faire la gestion des dossiers des membres d'emettre des factures. La version actuelle est un prototype.
+Logiciel comptable permettant de faire la gestion des dossiers des membres d'émettre des factures. La version actuelle est un prototype.
 
 
 #2. **Le Guide**
 
-### Sur la page d'acceuil l'utilisateur doit entrer un numéro de membre et appuyer sur **entré** afin de pouvoir afficher la liste des dossier qui le concerne.
+### Sur la page d'accueil l'utilisateur doit entrer un numéro de membre et appuyer sur **entré** afin de pouvoir afficher la liste des dossier qui le concerne.
 ![_Liste des dossiers_](images/listeDossier.png)
 
 
@@ -96,3 +96,12 @@ solon.joe-ricardo@courrier.uqam.ca
 
 
 #5. **Glossaire**
+
+
+* **membres** _Clients de l'entreprise qui se sont enregistrés_
+* **numéro de membre** _Chaque membre est identifié dans le système par un numéro unique_
+* **liste des dossiers** _Un membre peut avoir plusieurs dossier transactionnel_
+* **dossiers** _Contient des transactions faites par le membre_
+* **compte à recevoir** _Montants à réclamer au membre_
+* **comptes à payer** _Montants à verser au un membre_
+* **note de crédit** _Facturation partiel d'un compte à payer_
