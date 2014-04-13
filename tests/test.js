@@ -3,7 +3,7 @@ Test TP3
 */
 casper.test.begin("Chargement de la page", 1, function(test) {
  
-    casper.start('../vue.html', function(){
+    casper.start('http://localhost:8000/vue.html', function(){
         test.assertTitle('Dossier Comptable');
     });
 
@@ -16,7 +16,7 @@ casper.test.begin("Chargement de la page", 1, function(test) {
 
 casper.test.begin("Validation du selecteur de client", 2, function(test) {
  
-    casper.start('../vue.html', function(){
+    casper.start('http://localhost:8000/vue.html', function(){
         test.assertExists('#numeroDossier');
         test.assertVisible('#numeroDossier');
     });
@@ -29,7 +29,7 @@ casper.test.begin("Validation du selecteur de client", 2, function(test) {
 
 casper.test.begin("Validation des accordeons", 2, function(test) {
  
-    casper.start('../vue.html', function(){
+    casper.start('http://localhost:8000/vue.html', function(){
         test.assertExists('#page');
         test.assertNotVisible('#page');
     });
@@ -41,7 +41,7 @@ casper.test.begin("Validation des accordeons", 2, function(test) {
 
 
 casper.test.begin('Test des Liens des onglets du Dossier 1',2, function suite(test) {
-    casper.start("../index.html", function() {
+    casper.start("http://localhost:8000/vue.html", function() {
         test.assertExists('a[href="#aRecevoir"]');
         test.assertExists('a[href="#aPayer"]');
     });
@@ -52,7 +52,7 @@ casper.test.begin('Test des Liens des onglets du Dossier 1',2, function suite(te
 });
 
 casper.test.begin('Test des Liens de l\'onglet \'A recevoir\' du Dossier 1',5, function suite(test) {
-    casper.start("../index.html", function() {
+    casper.start("http://localhost:8000/vue.html", function() {
         test.assertExists('a[href="#livre"]');
         test.assertExists('a[href="#abonnement"]');
         test.assertExists('a[href="#mobilier"]');
@@ -66,7 +66,7 @@ casper.test.begin('Test des Liens de l\'onglet \'A recevoir\' du Dossier 1',5, f
 });
 
 casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
-    casper.start("../index.html", function() {
+    casper.start("http://localhost:8000/vue.html", function() {
         //    	test.assertExists('a[href="#livre"]');
         this.click('a[href="#livre"]');
         this.wait(500, function() {
