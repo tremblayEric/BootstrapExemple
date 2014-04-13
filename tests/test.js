@@ -42,21 +42,53 @@ casper.test.begin("Validation des accordeons", 2, function(test) {
 });
 
 
-casper.test.begin('remplir le formulaire membres',1, function suite(test) {
+casper.test.begin('remplir le formulaire membres',5, function suite(test) {
     casper.options.viewportSize = {width: 1200, height: 800};
     casper.start("http://localhost:8000/vue.html", function() {
-        this.fillSelectors('#formMembres',{
-            '#numeroDossier' : '12345'
-        },false);
+        this.evaluate(function(){
+            document.querySelector('#numeroDossier').value = "12345";
+        });
+        this.click('#memberLabel');
         this.wait(500,function(){
             test.assertFieldCSS("#numeroDossier", "12345");
             this.capture('test.png');
             this.click('#accordeonDossierUn');
             this.wait(500,function(){
+                test.assertVisible('#page');
                 this.capture('test1a.png');
                 this.click('#aPopupLivre');
                 this.wait(500,function(){
                     this.capture('test1b.png');
+                    this.click('#btnNoteCredit');
+                    this.wait(500,function(){
+                        test.assertVisible('#noteCredit');
+                        this.capture('test1c.png');
+                        this.evaluate(function(){
+                            document.querySelector('#item1Prix').value = "6";
+                        });
+                        this.click('#total');
+                        this.wait(500,function(){
+                            this.capture('test1d.png');
+                            test.assertMatch('149.81',/^149.81/i);
+                            this.evaluate(function(){
+                                document.querySelector('#idProjet').value = "projet10";
+                            });
+                            this.click('#total');
+                            this.wait(500,function(){
+                                this.click('#facturer');
+                                this.wait(900,function(){
+                                    this.capture('test1f.png');
+                                });
+                                test.assertMatch('projet10',/^projet10/);
+                                this.wait(2000,function(){
+                                    this.capture('test1g.png');
+                                });
+                                
+
+                            });
+                        });
+                        
+                    });
                 });
             });
             
