@@ -50,10 +50,49 @@ Logiciel comptable permettant de faire la gestion des dossiers des membres d'eme
 ###Les champs de quantités ainsi que ceux des prix unitaire sont modifiables.
 ![_details de facturation_](images/detailsFacture.png)
 
+###Il est possible d'effectuer la facturation de la totalité du compte à recevoir ou d'émettre une note de crédit facturant en partie selon des montants entrés par l'utilisateur.
+![_note de crédit_](images/noteCredit.png)
+
+###L'impresssion de la facture s'effectue en cliquant sur le bouton **$ Facturer**
+![_impression_](images/impression.png)
+
 
 #3. **FAQ**
 
+ * **Comment puis-je afficher la liste des dossiers d'un membre ?**
+ _En entrant son numéro dans la boite texte *Membre* de la page d'acceuil et en appuyant sur *Entré*_
+
+ * **Comment puis-je Consulter le contenu d'un dossier ?**
+ _En cliquant sur le nom du dossier._
+
+ * **Comment puis-je fermer un dossier ?** 
+ _En cliquant sur son nom._
+ 
+ * **Où puis-je trouver les comptes à recevoir?**
+ _En cliquant sur l'onlget **À Recevoir** d'un dossier._
+ 
+ * **Où puis-je trouver les comptes à payer?**
+ _En cliquant sur l'onlget **À payer** d'un dossier._
+ 
+ * **Pourquoi est-ce que je ne vois aucun détails?**
+ _Pour voir les détails vous devez cliquer sur le lien de la description dans la liste des comptes à recevoir._
+ 
+ * **Je dois modifier une facture, comment puis-je faire?**
+ _Les champs **Quantité** ainsi que **Prix unitaire** sont modifiables._
+ 
+ * **Je ne désire pas facturer la totalité du compte à recevoir, que faire?**
+ _Vous pouvez émettre une note de crédite en cliquant sur le bouton **Ajouter une note de crédit** et en entrant les montants que vous désirez facturer_
+ 
+ * **Comment faire pour facturer sur un projet en particulioer?**
+ _En entrant le nom du projet dans la boite texte **Choisir un projet à facturer**_
+
 #4. **Coordonnees**
+
+Eric Tremblay  TREE1307906
+tremblay.eric.18@courrier.uqam.ca
+
+Ricardo Solon SOLJ06048503
+solon.joe-ricardo@courrier.uqam.ca
 
 
 #5. **Glossaire**
