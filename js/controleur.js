@@ -12,6 +12,12 @@ $("#numeroDossier").on("change",function(){
     
 });
 
+$('#memberLabel').on("click",function(){
+    if($('#numeroDossier').val() != ""){
+        $('#page').show();
+    }
+});
+
 var calculTotal = function(){
     
     var prixItem_1 = +$("#item1Prix").val();
