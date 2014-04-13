@@ -1,6 +1,7 @@
 /*
 Test TP3 
 */
+
 casper.test.begin("Chargement de la page", 1, function(test) {
  
     casper.start('http://localhost:8000/vue.html', function(){
@@ -42,6 +43,7 @@ casper.test.begin("Validation des accordeons", 2, function(test) {
 
 
 casper.test.begin('remplir le formulaire membres',1, function suite(test) {
+    casper.options.viewportSize = {width: 1200, height: 800};
     casper.start("http://localhost:8000/vue.html", function() {
         this.fillSelectors('#formMembres',{
             '#numeroDossier' : '12345'
@@ -98,6 +100,7 @@ casper.test.begin('Test des Liens de l\'onglet \'A recevoir\' du Dossier 1',5, f
 });
 
 casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
+    casper.options.viewportSize = {width: 1200, height: 800};
     casper.start("http://localhost:8000/vue.html", function() {
         //    	test.assertExists('a[href="#livre"]');
         this.click('a[href="#livre"]');
@@ -146,7 +149,7 @@ casper.test.begin('Test  ouverture de la facture', 35, function suite(test) {
             //bouton note de credit
             test.assertExists('#btnNoteCredit',"Il existe un element  note de credit");
             test.assertEquals(this.getElementAttribute('#btnNoteCredit', 'type'),"button","L'element btnNoteCredit est un bouton");
-           
+           this.capture('test3.png');
 
 
 });             
