@@ -39,12 +39,12 @@ var calculTotal = function(){
     $("#montant3").val(totalItem3);
     
     
-    var totalAvantTPS = totalItem1 + totalItem2 + totalItem3;
+    var totalAvantTPS = totalItem1 + totalItem2 + totalItem3 - noteCredit;
     var tps = (totalAvantTPS * 0.05);
     var totalAvecTPS = totalAvantTPS + tps;
     var tvq = (totalAvecTPS * 0.0975);
     
-    var totalAvecTPSetTVQ = (totalAvecTPS + tvq) - noteCredit;
+    var totalAvecTPSetTVQ = (totalAvecTPS + tvq);
     
     $("#tps").val(tps.toFixed(2));
     $("#tvq").val(tvq.toFixed(2));
