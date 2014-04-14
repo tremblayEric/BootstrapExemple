@@ -14,19 +14,19 @@
 
 #1.  **Introduction**
 
-Logiciel comptable permettant de faire la gestion des dossiers des membres d'émettre des factures. La version actuelle est un prototype.
+Logiciel comptable permettant de faire la gestion des dossiers des membres et d'émettre des factures. La version actuelle est un prototype.
 
 
 #2. **Le Guide**
 
-### Sur la page d'accueil l'utilisateur doit entrer un numéro de membre et appuyer sur **entré** afin de pouvoir afficher la liste des dossier qui le concerne.
+### Sur la page d'accueil l'utilisateur doit entrer un numéro de membre et appuyer sur la touche **entrée** pour afficher la liste des dossiers qui le concerne.
 ![_Liste des dossiers_](images/listeDossier.png)
 
 
-###Cliquer ensuite sur l'onglet d'un dossier afin d'afficher les détails et de pouvoir le consulter.
+###Cliquer ensuite sur l'onglet d'un dossier afin d'afficher et consulter les détails.
 ![_Dossier détaillé_](images/detailsDossier.png)
 
-###Le premier onglet est un sommaire des compte à recevoir, un **clic** sur l'onglet **à payer** permet de consulter le sommaire des comptes à payer.
+###Le premier onglet est un sommaire des comptes à recevoir, un **clic** sur l'onglet **à payer** permet de consulter le sommaire des comptes à payer.
 ![_à payer_](images/aPayer.png)
 
 ###Il est possible de consulter et de modifier les détails d'un compte à recevoir. Cette fenêtre affiche des détails de facturation tel que:
@@ -53,7 +53,7 @@ Logiciel comptable permettant de faire la gestion des dossiers des membres d'ém
 ###Il est possible d'effectuer la facturation de la totalité du compte à recevoir ou d'émettre une note de crédit facturant en partie selon des montants entrés par l'utilisateur.
 ![_note de crédit_](images/noteCredit.png)
 
-###L'impresssion de la facture s'effectue en cliquant sur le bouton **$ Facturer**
+###L'impresssion de la facture s'effectue en cliquant sur le bouton **$ Facturer** qui s'affiche après avoir taper le nom du projet
 ![_impression_](images/impression.png)
 
 
@@ -91,7 +91,7 @@ Logiciel comptable permettant de faire la gestion des dossiers des membres d'ém
 Eric Tremblay  TREE1307906
 tremblay.eric.18@courrier.uqam.ca
 
-Ricardo Solon SOLJ06048503
+Joe-Ricardo Solon SOLJ06048503
 solon.joe-ricardo@courrier.uqam.ca
 
 
