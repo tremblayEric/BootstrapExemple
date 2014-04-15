@@ -69,7 +69,10 @@ casper.test.begin('remplir le formulaire membres',5, function suite(test) {
                         this.click('#total');
                         this.wait(500,function(){
                             this.capture('test1d.png');
-                            test.assertMatch('149.81',/^149.81/i);
+                            var newTotal = this.evaluate(function(){
+                                return document.querySelector('#total').value;
+                            });
+                            test.assertMatch(newTotal,/^172.86/);
                             this.evaluate(function(){
                                 document.querySelector('#idProjet').value = "projet10";
                             });
