@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="inf4150-30-interface-personne-machine">INF4150-30 : Interface personne machine</h1>
+<h2 id="opérations-comptables-élémentaires">### Opérations Comptables élémentaires</h2>
+<p><strong>Hiver 2014 - TP3</strong></p>
+<p>Ricardo Solon SOLJ06048503</p>
+<p>Eric Tremblay TREE13057906</p>
+<hr />
+<h4 id="prototype">Prototype</h4>
+<p>Ce prototype doit être utiliser avec <strong>le navigateur web Chrome</strong> exclusivement.</p>
+<p>Démarer un serveur python SimpleHTTPServer dans le dossier du projet contenant le fichier de format HTML: <em>vue.html</em></p>
+<pre><code>$ cd projetTP3
+$ python -m SimpleHTTPServer</code></pre>
+<p><em>Le port par défaut 8000 est utiliser pour le bon foctionnement du <strong>Prototype</strong> et des <strong>Tests</strong>.</em></p>
+<p><em>projetTP3 est le nom du dossier contenant tout les fichiers pour ce prototype.</em></p>
+<p>Ouvrer le prototype dans un navigateur web Chrome à l'addresse suivante : <a href="http://localhost:8000/vue.html" title="prototype">http://localhost:8000/vue.html</a></p>
+<p><strong>Étapes à suivre pour ce prototype</strong></p>
+<ol style="list-style-type: decimal">
+<li>Taper un numéro de membre dans le champs texte et apuyer sur la touche Entrée</li>
+<li>Cliquer sur le dossier 1</li>
+<li>Cliquer sur le lien vente de livres</li>
+<li>Modifier les quantités ou les prix unitaires dans la fenêtre modal(optionnel)</li>
+<li>Cliquer sur le boutton Ajouter une note de crédit pour ajouter une note de crédit à chaque item voulu (optionnel)</li>
+<li>Taper le nom du projet dans le champs texte projet dont la facture est associée</li>
+<li>Cliquer sur le boutton Facturer</li>
+<li>Constater que l'item Vente de livres a été facturer au montant précrit dans les étapes précédante pour le nom de projet déterminé à l'étape 6.</li>
+</ol>
+<hr />
+<h4 id="tests">Tests</h4>
+<p>Le serveur doit être prêt pour éxecuter les tests. Voir la procédure dans la section <strong>Protoype</strong> pour démarer le serveur correctement. Démarer les tests avec les commandes suivante:</p>
+<pre><code>$ cd tests   
+$ casperjs test test.js</code></pre>
+<hr />
+<h4 id="documentation">Documentation</h4>
+<p>la documentation se trouvre dans le dossier documentation. Dans ce dossier il y a la documentation au format HTML.</p>
+<pre><code>$ cd documentation</code></pre>
+<p>Utiliser le navigateur web Chrome pour visualiser la documentation contenu dans le fichier HTML guiddUtilisateur.html à l'addresse : <a href="http://localhost:8000/documentation/guideUtilisateur.html">http://localhost:8000/documentation/guideUtilisateur.html</a> <strong>avec le serveur préalablement activé</strong>.</p>
+</body>
+</html>
