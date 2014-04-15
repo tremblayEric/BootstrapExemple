@@ -4,7 +4,7 @@
 **Manuel de l'utilisateur**
 
 
-#   **Table de matière**
+#   **Table des matières**
 
 1. Introduction
 2. Le Guide
@@ -86,7 +86,7 @@ Logiciel comptable permettant de faire la gestion des dossiers des membres et d'
  * **Comment faire pour facturer sur un projet en particulioer?**
  _En entrant le nom du projet dans la boite texte **Choisir un projet à facturer**_
 
-#4. **Coordonnees**
+#4. **Coordonnées**
 
 Eric Tremblay  TREE1307906
 tremblay.eric.18@courrier.uqam.ca
