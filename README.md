@@ -57,4 +57,5 @@ la documentation se trouvre dans le dossier documentation. Dans ce dossier il y 
     $ cd documentation
 
 Utiliser le navigateur web Chrome pour visualiser la documentation contenu dans le fichier HTML guiddUtilisateur.html
+à l'addresse : [http://localhost:8000/documentation/guideUtilisateur.html](http://localhost:8000/documentation/guideUtilisateur.html) avec le serveur préalablement activé.
 
