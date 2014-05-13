@@ -88,12 +88,11 @@ Logiciel comptable permettant de faire la gestion des dossiers des membres et d'
 
 #4. **Coordonnées**
 
-Eric Tremblay  TREE1307906
-tremblay.eric.18@courrier.uqam.ca
+Eric Tremblay
+aEmail@email.com
 
-Joe-Ricardo Solon SOLJ06048503
-solon.joe-ricardo@courrier.uqam.ca
-
+Joe-Ricardo Solon
+anotehrEmail@email.com
 
 #5. **Glossaire**
 
