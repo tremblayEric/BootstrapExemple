@@ -4,9 +4,9 @@
 
 **Hiver 2014 - TP3**
 
-Ricardo Solon SOLJ06048503
+Ricardo Solon 
 
-Eric Tremblay TREE13057906
+Eric Tremblay 
 
 ----------
 
