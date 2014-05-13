@@ -92,7 +92,7 @@ Eric Tremblay
 aEmail@email.com
 
 Joe-Ricardo Solon
-anotehrEmail@email.com
+anotherEmail@email.com
 
 #5. **Glossaire**
 
